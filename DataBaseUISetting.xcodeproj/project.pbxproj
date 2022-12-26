@@ -15,6 +15,13 @@
 		D8B1FCCD29530E3C003C67BC /* MyReservationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B1FCCB29530E3C003C67BC /* MyReservationCell.xib */; };
 		D8B1FCCF29531134003C67BC /* MyInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCCE29531134003C67BC /* MyInfoController.swift */; };
 		D8B1FCD1295316D9003C67BC /* MyInfoSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCD0295316D9003C67BC /* MyInfoSettingController.swift */; };
+		D8B1FCD32955819E003C67BC /* CinemaSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCD22955819E003C67BC /* CinemaSelectController.swift */; };
+		D8B1FCD5295581AF003C67BC /* MovieSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCD4295581AF003C67BC /* MovieSelectController.swift */; };
+		D8B1FCD7295581BE003C67BC /* TimeSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCD6295581BE003C67BC /* TimeSelectController.swift */; };
+		D8B1FCD92955896D003C67BC /* SeatSelectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCD82955896D003C67BC /* SeatSelectController.swift */; };
+		D8B1FCDC29559227003C67BC /* SeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCDA29559227003C67BC /* SeatCell.swift */; };
+		D8B1FCDD29559227003C67BC /* SeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B1FCDB29559227003C67BC /* SeatCell.xib */; };
+		D8B1FCDF29598C30003C67BC /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B1FCDE29598C30003C67BC /* LogInController.swift */; };
 		D8B4C82E291BCBEE00C34A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4C82D291BCBEE00C34A46 /* AppDelegate.swift */; };
 		D8B4C830291BCBEE00C34A46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4C82F291BCBEE00C34A46 /* SceneDelegate.swift */; };
 		D8B4C832291BCBEE00C34A46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4C831291BCBEE00C34A46 /* ViewController.swift */; };
@@ -22,6 +29,7 @@
 		D8B4C837291BCBF000C34A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B4C836291BCBF000C34A46 /* Assets.xcassets */; };
 		D8B4C843291BCD1F00C34A46 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4C841291BCD1F00C34A46 /* MyCollectionViewCell.swift */; };
 		D8B4C844291BCD1F00C34A46 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B4C842291BCD1F00C34A46 /* MyCollectionViewCell.xib */; };
+		D8CD2511295990CC00FC36D2 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD2510295990CC00FC36D2 /* SignUpController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +41,13 @@
 		D8B1FCCB29530E3C003C67BC /* MyReservationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyReservationCell.xib; sourceTree = "<group>"; };
 		D8B1FCCE29531134003C67BC /* MyInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoController.swift; sourceTree = "<group>"; };
 		D8B1FCD0295316D9003C67BC /* MyInfoSettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoSettingController.swift; sourceTree = "<group>"; };
+		D8B1FCD22955819E003C67BC /* CinemaSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaSelectController.swift; sourceTree = "<group>"; };
+		D8B1FCD4295581AF003C67BC /* MovieSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSelectController.swift; sourceTree = "<group>"; };
+		D8B1FCD6295581BE003C67BC /* TimeSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectController.swift; sourceTree = "<group>"; };
+		D8B1FCD82955896D003C67BC /* SeatSelectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectController.swift; sourceTree = "<group>"; };
+		D8B1FCDA29559227003C67BC /* SeatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCell.swift; sourceTree = "<group>"; };
+		D8B1FCDB29559227003C67BC /* SeatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatCell.xib; sourceTree = "<group>"; };
+		D8B1FCDE29598C30003C67BC /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		D8B4C82A291BCBEE00C34A46 /* DataBaseUISetting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataBaseUISetting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B4C82D291BCBEE00C34A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8B4C82F291BCBEE00C34A46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +57,7 @@
 		D8B4C83B291BCBF000C34A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8B4C841291BCD1F00C34A46 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8B4C842291BCD1F00C34A46 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		D8CD2510295990CC00FC36D2 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +75,15 @@
 			isa = PBXGroup;
 			children = (
 				D8B4C831291BCBEE00C34A46 /* ViewController.swift */,
+				D8B1FCD22955819E003C67BC /* CinemaSelectController.swift */,
+				D8B1FCD4295581AF003C67BC /* MovieSelectController.swift */,
+				D8B1FCD6295581BE003C67BC /* TimeSelectController.swift */,
 				D8B1FCC52952FA47003C67BC /* MovieDetailController.swift */,
 				D8B1FCCE29531134003C67BC /* MyInfoController.swift */,
 				D8B1FCD0295316D9003C67BC /* MyInfoSettingController.swift */,
+				D8B1FCD82955896D003C67BC /* SeatSelectController.swift */,
+				D8B1FCDE29598C30003C67BC /* LogInController.swift */,
+				D8CD2510295990CC00FC36D2 /* SignUpController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -74,6 +96,8 @@
 				D8B1FCCB29530E3C003C67BC /* MyReservationCell.xib */,
 				D8B4C841291BCD1F00C34A46 /* MyCollectionViewCell.swift */,
 				D8B4C842291BCD1F00C34A46 /* MyCollectionViewCell.xib */,
+				D8B1FCDA29559227003C67BC /* SeatCell.swift */,
+				D8B1FCDB29559227003C67BC /* SeatCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8B4C837291BCBF000C34A46 /* Assets.xcassets in Resources */,
+				D8B1FCDD29559227003C67BC /* SeatCell.xib in Resources */,
 				D8B4C844291BCD1F00C34A46 /* MyCollectionViewCell.xib in Resources */,
 				D8B1FCCD29530E3C003C67BC /* MyReservationCell.xib in Resources */,
 				D8B4C835291BCBEE00C34A46 /* Main.storyboard in Resources */,
@@ -190,16 +215,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B1FCD32955819E003C67BC /* CinemaSelectController.swift in Sources */,
 				D8B4C832291BCBEE00C34A46 /* ViewController.swift in Sources */,
 				D8B1FCCF29531134003C67BC /* MyInfoController.swift in Sources */,
 				D8B4C82E291BCBEE00C34A46 /* AppDelegate.swift in Sources */,
 				D8B4C843291BCD1F00C34A46 /* MyCollectionViewCell.swift in Sources */,
 				D85EC6FB292C633000E2ECFF /* Consist.swift in Sources */,
+				D8B1FCDC29559227003C67BC /* SeatCell.swift in Sources */,
 				D8B4C830291BCBEE00C34A46 /* SceneDelegate.swift in Sources */,
 				D8B1FCCC29530E3C003C67BC /* MyReservationCell.swift in Sources */,
 				D8B1FCC62952FA47003C67BC /* MovieDetailController.swift in Sources */,
+				D8B1FCD92955896D003C67BC /* SeatSelectController.swift in Sources */,
+				D8CD2511295990CC00FC36D2 /* SignUpController.swift in Sources */,
+				D8B1FCD5295581AF003C67BC /* MovieSelectController.swift in Sources */,
+				D8B1FCDF29598C30003C67BC /* LogInController.swift in Sources */,
 				D85EC6F9292C589800E2ECFF /* MovieManager.swift in Sources */,
 				D8B1FCD1295316D9003C67BC /* MyInfoSettingController.swift in Sources */,
+				D8B1FCD7295581BE003C67BC /* TimeSelectController.swift in Sources */,
 				D85EC6F7292C581B00E2ECFF /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
