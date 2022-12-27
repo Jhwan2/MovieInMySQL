@@ -6,27 +6,25 @@
 //
 
 import UIKit
+//enum phpString {
+//    case user = "http://localhost/service.php"
+//    case movieList = "http://localhost/service.php"
+//    case cinemaList = "http://localhost/service.php"
+//}
 
-class LogInController: UIViewController {
+final class LogInController: UIViewController {
+    
+    private var db = dbManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkingExam()
-
+        db.fetchUser(searchTerm: "http://localhost/service.php") { data in
+            dump(data)
+        }
+        
         // Do any additional setup after loading the view.
     }
     
-    func networkingExam(){
-        print("@@@@@@@@@네트워크 시작")
-        let movieURL = "http://localhost/service.php"
-
-        guard let url = URL(string: movieURL) else { return  }
-        URLSession.shared.dataTask(with: url) { data, responde, error in
-            // code editting
-            dump(data)
-            
-        }.resume()
-    }
     
 
     /*

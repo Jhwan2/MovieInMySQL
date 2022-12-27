@@ -30,6 +30,7 @@
 		D8B4C843291BCD1F00C34A46 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B4C841291BCD1F00C34A46 /* MyCollectionViewCell.swift */; };
 		D8B4C844291BCD1F00C34A46 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B4C842291BCD1F00C34A46 /* MyCollectionViewCell.xib */; };
 		D8CD2511295990CC00FC36D2 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD2510295990CC00FC36D2 /* SignUpController.swift */; };
+		D8CD2513295ADA7A00FC36D2 /* DataBaseConect.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CD2512295ADA7A00FC36D2 /* DataBaseConect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D8B4C841291BCD1F00C34A46 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		D8B4C842291BCD1F00C34A46 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		D8CD2510295990CC00FC36D2 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		D8CD2512295ADA7A00FC36D2 /* DataBaseConect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseConect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				D85EC6F8292C589800E2ECFF /* MovieManager.swift */,
 				D85EC6FA292C633000E2ECFF /* Consist.swift */,
 				D85EC6F6292C581B00E2ECFF /* Movie.swift */,
+				D8CD2512295ADA7A00FC36D2 /* DataBaseConect.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				D8CD2511295990CC00FC36D2 /* SignUpController.swift in Sources */,
 				D8B1FCD5295581AF003C67BC /* MovieSelectController.swift in Sources */,
 				D8B1FCDF29598C30003C67BC /* LogInController.swift in Sources */,
+				D8CD2513295ADA7A00FC36D2 /* DataBaseConect.swift in Sources */,
 				D85EC6F9292C589800E2ECFF /* MovieManager.swift in Sources */,
 				D8B1FCD1295316D9003C67BC /* MyInfoSettingController.swift in Sources */,
 				D8B1FCD7295581BE003C67BC /* TimeSelectController.swift in Sources */,

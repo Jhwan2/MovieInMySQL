@@ -13,3 +13,14 @@ struct Movie{
     let movieImgUrl: String?
     let movieAct: String?
 }
+
+struct User: Codable {
+    let id, password, name, phoneNumber: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, password, name
+        case phoneNumber = "phone number"
+    }
+}
+typealias Users = [User]
+

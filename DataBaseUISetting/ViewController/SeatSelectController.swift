@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SeatSelectController: UIViewController {
+final class SeatSelectController: UIViewController {
     
     let array = Array(1...35)
     var arr: Array<String> = []
