@@ -11,13 +11,17 @@ final class ViewController: UIViewController {
     
     lazy var array:[Int] = []
     @IBOutlet weak var collectionView: UICollectionView!
+    let db = dbManager.shared
     
-    let flowLayout = UICollectionViewFlowLayout()
+    private let flowLayout = UICollectionViewFlowLayout()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewSetting()
         collectionViewLayoutSetting()
+        db.fetchUser(searchTerm: "http://localhost/movie.php") { movie in
+            dump(movie)
+        }
     }
     
     func collectionViewSetting() {

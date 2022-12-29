@@ -7,12 +7,20 @@
 
 import Foundation
 
-struct Movie{
-    let movieName: String?
-    let movieDate: Date?
-    let movieImgUrl: String?
-    let movieAct: String?
+struct Movie: Codable {
+    let movieNumber, actor, releaseDate, movieTitle: String
+    let director, ageLimit: String
+
+    enum CodingKeys: String, CodingKey {
+        case movieNumber = "movie number"
+        case actor
+        case releaseDate = "release date"
+        case movieTitle = "movie title"
+        case director
+        case ageLimit = "age limit"
+    }
 }
+typealias Movies = [Movie]
 
 struct User: Codable {
     let id, password, name, phoneNumber: String

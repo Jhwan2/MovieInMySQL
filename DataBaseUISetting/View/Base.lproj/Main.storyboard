@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AtD-gd-CBv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AtD-gd-CBv">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-Dm-Jn0">
-                                <rect key="frame" x="0.0" y="278" width="393" height="162"/>
+                                <rect key="frame" x="0.0" y="278" width="392" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRy-zK-bfI">
-                                <rect key="frame" x="159" y="448" width="75" height="35"/>
+                                <rect key="frame" x="138" y="448" width="117" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="극장 선택완료"/>
                                 <connections>
                                     <segue destination="rEG-Em-CgO" kind="show" id="N8B-C3-OF6"/>
                                 </connections>
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljd-DW-oLB">
-                                <rect key="frame" x="-1" y="300" width="393" height="162"/>
+                                <rect key="frame" x="-1" y="300" width="392" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="영화 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBW-H3-dXc">
@@ -71,10 +71,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYS-bR-8rk">
-                                <rect key="frame" x="159" y="470" width="75" height="35"/>
+                                <rect key="frame" x="138" y="470" width="117" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="영화 선택완료"/>
                                 <connections>
                                     <segue destination="GVh-fd-KXm" kind="show" id="t9I-Tz-uRs"/>
                                 </connections>
@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r3F-Ih-qEA">
-                                <rect key="frame" x="0.0" y="333" width="392" height="162"/>
+                                <rect key="frame" x="0.0" y="333" width="391" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIe-6C-Ooj">
@@ -170,6 +170,7 @@
                                         <connections>
                                             <action selector="orderBtnTapped:" destination="eZ6-Rv-wPh" eventType="touchUpInside" id="VuZ-bW-jvz"/>
                                             <action selector="orderBtnTapped:" destination="Gfx-11-PAw" eventType="touchUpInside" id="z4y-kO-VAC"/>
+                                            <segue destination="nFU-Ik-3Kb" kind="show" id="Lb9-4o-LFK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -312,7 +313,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ang-Cx-Wz4">
-                                <rect key="frame" x="15" y="50" width="363" height="220"/>
+                                <rect key="frame" x="15" y="106" width="363" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-f0-f3l">
                                         <rect key="frame" x="139.33333333333334" y="10.000000000000002" width="84.666666666666657" height="27.666666666666671"/>
@@ -336,7 +337,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNB-cc-Axv">
-                                                <rect key="frame" x="0.0" y="64.666666666666657" width="41.333333333333336" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="64.666666666666686" width="41.333333333333336" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -344,7 +345,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiI-Yn-gba">
-                                        <rect key="frame" x="270.66666666666669" y="180.66666666666666" width="87.333333333333314" height="34.333333333333343"/>
+                                        <rect key="frame" x="270.66666666666669" y="180.66666666666669" width="87.333333333333314" height="34.333333333333343"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="정보 수정"/>
@@ -365,7 +366,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Fz-Ptc">
-                                <rect key="frame" x="15" y="280" width="363" height="454"/>
+                                <rect key="frame" x="15" y="336" width="363" height="433"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -383,6 +384,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="마이페이지" id="Q6t-UN-NK9"/>
+                    <navigationItem key="navigationItem" id="x6t-on-Bxd"/>
                     <connections>
                         <outlet property="idLabel" destination="pNB-cc-Axv" id="pDv-kV-6Vv"/>
                         <outlet property="infoView" destination="ang-Cx-Wz4" id="oWJ-F4-9hd"/>
@@ -722,7 +724,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AwP-b5-J0X">
-                                <rect key="frame" x="0.0" y="333" width="392" height="162"/>
+                                <rect key="frame" x="0.0" y="333" width="391" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="시간 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9C-n7-QPi">
@@ -733,10 +735,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5c-TQ-Agl">
-                                <rect key="frame" x="159" y="503" width="75" height="35"/>
+                                <rect key="frame" x="138" y="503" width="117" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="시간 선택완료"/>
                                 <connections>
                                     <segue destination="Gfx-11-PAw" kind="show" id="ssI-Mk-eKc"/>
                                 </connections>
@@ -794,6 +796,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="XSA-9k-cBe"/>
+        <segue reference="Lb9-4o-LFK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>

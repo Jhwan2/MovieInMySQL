@@ -12,7 +12,6 @@ enum NetworkError: Error {
 //MARK: - Networking (서버와 통신하는) 클래스 모델
 
 final class dbManager {
-    
     // 여러화면에서 통신을 한다면, 일반적으로 싱글톤으로 만듦
     static let shared = dbManager()
     // 여러객체를 추가적으로 생성하지 못하도록 설정
@@ -32,6 +31,12 @@ final class dbManager {
     // 실제 Request하는 함수 (비동기적 실행 ===> 클로저 방식으로 끝난 시점을 전달 받도록 설계)
     private func performRequest(with urlString: String, completion: @escaping NetworkCompletion) {
         //print(#function)
+        var typed: Any
+        if urlString.contains("movie") {
+            typed = Movies.self
+        } else {
+            typed = Users.self
+        }
         guard let url = URL(string: urlString) else { return }
         
         let session = URLSession(configuration: .default)
@@ -47,9 +52,8 @@ final class dbManager {
                 return
             }
             dump(safeData)
-            
             // 데이터 분석하기
-            if let musics = self.parseJSON(safeData) {
+            if let musics = self.parseJSON(safeData,type: typed) {
                 print("Parse 실행")
                 completion(.success(musics))
             } else {
@@ -61,12 +65,11 @@ final class dbManager {
     }
     
     // 받아본 데이터 분석하는 함수 (동기적 실행)
-    private func parseJSON(_ userData: Data) -> [User]? {
+    private func parseJSON(_ userData: Data, type: Any) -> [User]? {
         //print(#function)
         // 성공
         do {
             // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
-            // (JSON 데이터 ====> MusicData 클래스)
             let UData = try JSONDecoder().decode(Users.self, from: userData)
             return UData
         // 실패
