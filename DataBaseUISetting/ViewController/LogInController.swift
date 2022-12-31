@@ -13,18 +13,38 @@ import UIKit
 //}
 
 final class LogInController: UIViewController {
+    @IBOutlet weak var idTextFld: UITextField!
+    @IBOutlet weak var pwTextFld: UITextField!
     
     private var db = dbManager.shared
+    var array:Users = [] {
+        didSet {
+            userCheck()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        db.fetchUser(searchTerm: "http://localhost/service.php") { data in
-            dump(data)
-        }
-        
+        userCheckList()
+//        userCheck()
         // Do any additional setup after loading the view.
     }
     
+    func userCheckList() {
+        db.fetchUser(searchTerm: "http://localhost/MovieApp/service.php") { result in
+//            dump(data)
+            switch result {
+            case .success(let data):
+                self.array = data as! Users
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func userCheck() {
+        
+    }
     
 
     /*

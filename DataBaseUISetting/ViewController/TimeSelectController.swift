@@ -9,13 +9,33 @@ import UIKit
 
 class TimeSelectController: UIViewController {
     @IBOutlet weak var timePickerView: UIPickerView!
+    let db = dbManager.shared
+    var array:Times = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.timePickerView.reloadAllComponents()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         timePickerView.delegate = self
         timePickerView.dataSource = self
-
+        TimeArrGet()
         // Do any additional setup after loading the view.
+    }
+    
+    func TimeArrGet() {
+        db.fetchUser(searchTerm: "http://localhost/MovieApp/scedule.php") { result in
+//            dump(data)
+            switch result {
+            case .success(let Datas):
+                self.array = Datas as! Times
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
 
@@ -36,11 +56,11 @@ extension TimeSelectController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return array.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String("aa")
+        return array[row].screeningDate
     }
 }
 

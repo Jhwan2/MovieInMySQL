@@ -157,7 +157,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="e2M-Cn-eeP">
                                 <rect key="frame" x="0.0" y="670.33333333333337" width="393" height="88.666666666666629"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDv-1H-jIa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좌석을 선택하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDv-1H-jIa">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -670,6 +670,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LogIn" id="Km5-J6-rZH"/>
+                    <connections>
+                        <outlet property="idTextFld" destination="vD4-pM-KQY" id="noA-Dj-KjW"/>
+                        <outlet property="pwTextFld" destination="mZe-qh-xJg" id="k5o-tV-9FC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhj-Uo-nFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -795,6 +799,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nCb-pd-kXO"/>
         <segue reference="XSA-9k-cBe"/>
         <segue reference="Lb9-4o-LFK"/>
     </inferredMetricsTieBreakers>

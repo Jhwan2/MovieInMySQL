@@ -17,7 +17,7 @@ final class dbManager {
     // 여러객체를 추가적으로 생성하지 못하도록 설정
     private init() {}
     
-    typealias NetworkCompletion = (Result<[User], NetworkError>) -> Void
+    typealias NetworkCompletion = (Result<[Any], NetworkError>) -> Void
 
     // 네트워킹 요청하는 함수
     func fetchUser(searchTerm: String, completion: @escaping NetworkCompletion) {
@@ -34,9 +34,16 @@ final class dbManager {
         var typed: Any
         if urlString.contains("movie") {
             typed = Movies.self
-        } else {
+        } else if urlString.contains("service") {
             typed = Users.self
+        } else if urlString.contains("cinema") {
+            typed = Cinemas.self
+        } else if urlString.contains("scedule") {
+            typed = Times.self
+        } else {
+            return
         }
+//        print(typed)
         guard let url = URL(string: urlString) else { return }
         
         let session = URLSession(configuration: .default)
@@ -53,30 +60,102 @@ final class dbManager {
             }
             dump(safeData)
             // 데이터 분석하기
-            if let musics = self.parseJSON(safeData,type: typed) {
-                print("Parse 실행")
-                completion(.success(musics))
+            if type(of: typed) == Users.Type.self {
+                if let musics = self.parseJSON(safeData,typed: typed) as? Users {
+                    print("Parse 실행")
+                    completion(.success(musics))
+                } else {
+                    print("Parse 실패")
+                    completion(.failure(.parseError))
+                }
+            } else if type(of: typed) == Movies.Type.self {
+                if let musics = self.parseJSON(safeData,typed: typed) as? Movies {
+                    print("Parse 실행")
+                    completion(.success(musics))
+                } else {
+                    print("Parse 실패")
+                    completion(.failure(.parseError))
+                }
+            } else if type(of: typed) == Cinemas.Type.self {
+                if let musics = self.parseJSON(safeData,typed: typed) as? Cinemas {
+                    print("Parse 실행")
+                    completion(.success(musics))
+                } else {
+                    print("Parse 실패")
+                    completion(.failure(.parseError))
+                }
+            } else if type(of: typed) == Times.Type.self {
+                if let musics = self.parseJSON(safeData,typed: typed) as? Times {
+                    print("Parse 실행")
+                    completion(.success(musics))
+                } else {
+                    print("Parse 실패")
+                    completion(.failure(.parseError))
+                }
             } else {
-                print("Parse 실패")
-                completion(.failure(.parseError))
+                return
             }
         }
         task.resume()
     }
     
     // 받아본 데이터 분석하는 함수 (동기적 실행)
-    private func parseJSON(_ userData: Data, type: Any) -> [User]? {
+    private func parseJSON(_ userData: Data, typed: Any) -> [Any]? {
         //print(#function)
         // 성공
-        do {
-            // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
-            let UData = try JSONDecoder().decode(Users.self, from: userData)
-            return UData
-        // 실패
-        } catch {
-            print(error.localizedDescription)
+        if type(of: typed) == Users.Type.self {
+            print("Users 타입 확인 완료")
+            do {
+                // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
+                let UData = try JSONDecoder().decode(Users.self, from: userData)
+                return UData
+            // 실패
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+        } else if type(of: typed) == Movies.Type.self {
+            print("Movie 타입 확인완료")
+            dump(userData)
+            do {
+                // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
+                let UData = try JSONDecoder().decode(Movies.self, from: userData)
+                return UData
+            // 실패
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+        } else if type(of: typed) == Cinemas.Type.self {
+            print("Cinema 타입 확인완료")
+            dump(userData)
+            do {
+                // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
+                let UData = try JSONDecoder().decode(Cinemas.self, from: userData)
+                return UData
+            // 실패
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+            
+        } else if type(of: typed) == Times.Type.self {
+            print("Time 타입 확인완료")
+            dump(userData)
+            do {
+                // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
+                let UData = try JSONDecoder().decode(Times.self, from: userData)
+                return UData
+            // 실패
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+        } else {
+            print("모든 타입 확인 실패")
             return nil
         }
     }
+    
 }
 

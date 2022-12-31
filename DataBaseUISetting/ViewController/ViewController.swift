@@ -9,7 +9,13 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    lazy var array:[Int] = []
+    lazy var array:Movies = [] {
+        didSet {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
+    }
     @IBOutlet weak var collectionView: UICollectionView!
     let db = dbManager.shared
     
@@ -19,8 +25,18 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         collectionViewSetting()
         collectionViewLayoutSetting()
-        db.fetchUser(searchTerm: "http://localhost/movie.php") { movie in
-            dump(movie)
+        movieListGet()
+    }
+    
+    func movieListGet() {
+        db.fetchUser(searchTerm: "http://localhost/MovieApp/movie.php") { result in
+//            dump(result)
+            switch result {
+            case .success(let musicDatas):
+                self.array = musicDatas as! Movies
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
     
@@ -49,14 +65,16 @@ final class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
         
 //        cell.mainImgView.image = UIImage(systemName: "Bold")
-        cell.mainLabel.text = "asdfasd@"
+        cell.mainLabel.text = array[indexPath.item].movieTitle
+        cell.subLabel.text = array[indexPath.item].actor
+        cell.detailLabel.text = array[indexPath.item].director
         cell.accessibilityContainerType = .none
         
         return cell

@@ -10,16 +10,32 @@ import UIKit
 final class CinemaSelectController: UIViewController {
     
     @IBOutlet weak var cinemaPickerView: UIPickerView!
-    var abc = 1
-    
+    let db = dbManager.shared
+    var array:Cinemas = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.cinemaPickerView.reloadAllComponents()
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         cinemaPickerView.delegate = self
         cinemaPickerView.dataSource = self
         // Do any additional setup after loading the view.
+        cinemaArrGet()
     }
-    
-
+    func cinemaArrGet() {
+        db.fetchUser(searchTerm: "http://localhost/MovieApp/cinema.php") { result in
+//            dump(data)
+            switch result {
+            case .success(let Datas):
+                self.array = Datas as! Cinemas
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     // MARK: - Navigation
 
@@ -34,11 +50,11 @@ extension CinemaSelectController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        return array.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String(abc)
+        return array[row].movieCinemaName
     }
     
 }

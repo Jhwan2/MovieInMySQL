@@ -8,7 +8,14 @@
 import UIKit
 
 class MovieSelectController: UIViewController {
-    
+    let db = dbManager.shared
+    var array:Movies = [] {
+        didSet{
+            DispatchQueue.main.async {
+                self.moviePickerView.reloadAllComponents()
+            }
+        }
+    }
 
     @IBOutlet weak var moviePickerView: UIPickerView!
     
@@ -16,10 +23,21 @@ class MovieSelectController: UIViewController {
         super.viewDidLoad()
         moviePickerView.delegate = self
         moviePickerView.dataSource = self
-
+        MovieArrGet()
         // Do any additional setup after loading the view.
     }
     
+    func MovieArrGet() {
+        db.fetchUser(searchTerm: "http://localhost/MovieApp/movie.php") { result in
+//            dump(data)
+            switch result {
+            case .success(let Datas):
+                self.array = Datas as! Movies
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -38,11 +56,12 @@ extension MovieSelectController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 3
+        print(array.count)
+        return array.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String("aa")
+        return array[row].movieTitle
     }
     
 }
