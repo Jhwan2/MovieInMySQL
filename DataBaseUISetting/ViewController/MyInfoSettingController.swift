@@ -8,11 +8,14 @@
 import UIKit
 
 final class MyInfoSettingController: UIViewController {
-
+    @IBOutlet weak var idLabel: UILabel!
+    var db = dbManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
-
+        let us = db.getUserInfo()
+        idLabel.text = us.id
         // Do any additional setup after loading the view.
     }
     

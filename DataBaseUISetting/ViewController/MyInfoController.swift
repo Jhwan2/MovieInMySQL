@@ -8,7 +8,9 @@
 import UIKit
 
 final class MyInfoController: UIViewController {
-
+    
+    var db = dbManager.shared
+    
     @IBOutlet weak var infoView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phNumLabel: UILabel!
@@ -18,12 +20,19 @@ final class MyInfoController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetting()
-
+        myInfoSetting()
     }
     
     func tableViewSetting() {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "MyReservationCell", bundle: nil), forCellReuseIdentifier: "reservationCell")
+    }
+    
+    func myInfoSetting() {
+        let us = db.getUserInfo()
+        nameLabel.text = "이름 : " + us.name
+        phNumLabel.text = "번호 : " + us.phoneNumber
+        idLabel.text = "아이디 : " + us.id
     }
 
     

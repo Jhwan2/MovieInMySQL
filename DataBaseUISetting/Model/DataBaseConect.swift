@@ -17,8 +17,33 @@ final class dbManager {
     // 여러객체를 추가적으로 생성하지 못하도록 설정
     private init() {}
     
+    private var userArr: Users = []
+    private var userInfo: User!
+    
+    
     typealias NetworkCompletion = (Result<[Any], NetworkError>) -> Void
-
+    
+    func userCheck(id: String, pw: String) -> Bool {
+        if userArr != nil {
+            for i in userArr {
+                if i.id == id {
+                    if i.password == pw {
+                        self.userInfo = i
+                        return true
+                    }
+                }
+                return false
+            }
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func getUserInfo() -> User {
+        return userInfo
+    }
+    
     // 네트워킹 요청하는 함수
     func fetchUser(searchTerm: String, completion: @escaping NetworkCompletion) {
         let urlString = searchTerm
@@ -108,6 +133,7 @@ final class dbManager {
             do {
                 // 우리가 만들어 놓은 구조체(클래스 등)로 변환하는 객체와 메서드
                 let UData = try JSONDecoder().decode(Users.self, from: userData)
+                self.userArr = UData
                 return UData
             // 실패
             } catch {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AtD-gd-CBv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SiW-ud-u62">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CinemaSelectController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsr-Dm-Jn0">
@@ -56,7 +56,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="rEG-Em-CgO" customClass="MovieSelectController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XcU-2o-ywu">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljd-DW-oLB">
@@ -131,11 +131,11 @@
             <objects>
                 <viewController id="Gfx-11-PAw" customClass="SeatSelectController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R6S-qn-sIE">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QVw-oc-Lyj">
-                                <rect key="frame" x="0.0" y="56" width="393" height="614.33333333333337"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="567.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RsR-cI-vlt">
                                     <size key="itemSize" width="128" height="128"/>
@@ -208,13 +208,13 @@
         <!--View Controller-->
         <scene sceneID="GdA-hk-fL2">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="v47-Fi-bMb" customClass="ViewController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v47-Fi-bMb" customClass="ViewController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dDN-Yf-wpb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xoW-xc-GGI">
-                                <rect key="frame" x="0.0" y="56" width="393" height="713"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fmn-Hn-mHB">
                                     <size key="itemSize" width="128" height="128"/>
@@ -309,11 +309,11 @@
             <objects>
                 <viewController id="nFU-Ik-3Kb" customClass="MyInfoController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qnl-0i-pgV">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ang-Cx-Wz4">
-                                <rect key="frame" x="15" y="106" width="363" height="220"/>
+                                <rect key="frame" x="15" y="153" width="363" height="220"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJV-f0-f3l">
                                         <rect key="frame" x="139.33333333333334" y="10.000000000000002" width="84.666666666666657" height="27.666666666666671"/>
@@ -331,7 +331,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-OG-5QA">
-                                                <rect key="frame" x="0.0" y="32.333333333333343" width="41.333333333333336" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="32.333333333333314" width="41.333333333333336" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -366,7 +366,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dDp-Fz-Ptc">
-                                <rect key="frame" x="15" y="336" width="363" height="433"/>
+                                <rect key="frame" x="15" y="383" width="363" height="386"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -402,7 +402,7 @@
             <objects>
                 <viewController title="정보 수정" id="vQe-Ob-b8H" customClass="MyInfoSettingController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka4-Qr-TvL">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnz-GZ-gfF">
@@ -482,6 +482,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ciL-5a-0Qg"/>
+                    <connections>
+                        <outlet property="idLabel" destination="wxY-VP-2WP" id="KJ3-tL-740"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ooF-dI-eHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -582,7 +585,7 @@
         <!--LogIn-->
         <scene sceneID="ALQ-ot-Eu9">
             <objects>
-                <viewController id="SiW-ud-u62" customClass="LogInController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SiW-ud-u62" customClass="LogInController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2Y-uV-LQ9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -630,7 +633,7 @@
                                                     <constraint firstAttribute="width" constant="150" id="iZ0-vX-UZp"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -642,7 +645,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
                                                 <connections>
-                                                    <segue destination="Usd-ik-4Yj" kind="show" id="C2h-9z-v0T"/>
+                                                    <action selector="logInCheckBtn:" destination="SiW-ud-u62" eventType="touchUpInside" id="tHK-FU-2ZY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcq-zb-5LE">
@@ -677,12 +680,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhj-Uo-nFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982.44274809160299" y="-18.30985915492958"/>
+            <point key="canvasLocation" x="-305" y="-4"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wTa-bd-mht">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Usd-ik-4Yj" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Usd-ik-4Yj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="1FZ-b7-Y7P"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EGC-w5-pv3">
@@ -703,11 +706,11 @@
         <!--영화 정보-->
         <scene sceneID="I7i-Wt-JYA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HEC-4g-TSq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="firstView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HEC-4g-TSq" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="영화 정보" id="jy3-S8-uYZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8FP-5Z-O10">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -724,7 +727,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="GVh-fd-KXm" customClass="TimeSelectController" customModule="DataBaseUISetting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5i-oe-CHG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AwP-b5-J0X">
@@ -767,7 +770,7 @@
                     <tabBarItem key="tabBarItem" title="예매" id="ONI-ws-zRb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CPT-SB-vmy">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -779,28 +782,8 @@
             </objects>
             <point key="canvasLocation" x="2805.3435114503814" y="-18.30985915492958"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mmg-To-9Io">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AtD-gd-CBv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GOS-MG-uAR">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="SiW-ud-u62" kind="relationship" relationship="rootViewController" id="nrb-S1-X8z"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eE0-zS-SVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="55.725190839694655" y="-18.30985915492958"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nCb-pd-kXO"/>
-        <segue reference="XSA-9k-cBe"/>
         <segue reference="Lb9-4o-LFK"/>
     </inferredMetricsTieBreakers>
     <resources>

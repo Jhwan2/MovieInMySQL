@@ -17,12 +17,6 @@ final class LogInController: UIViewController {
     @IBOutlet weak var pwTextFld: UITextField!
     
     private var db = dbManager.shared
-    var array:Users = [] {
-        didSet {
-            userCheck()
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         userCheckList()
@@ -32,29 +26,38 @@ final class LogInController: UIViewController {
     
     func userCheckList() {
         db.fetchUser(searchTerm: "http://localhost/MovieApp/service.php") { result in
-//            dump(data)
-            switch result {
-            case .success(let data):
-                self.array = data as! Users
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
+            dump(result)
         }
     }
     
-    func userCheck() {
-        
+    @IBAction func logInCheckBtn(_ sender: UIButton) {
+        if idTextFld.text != "" || pwTextFld.text != "" {
+            print("둘다 안비었음")
+            guard let Id = idTextFld.text else { return }
+            guard let Pw = pwTextFld.text else { return }
+            if db.userCheck(id: Id, pw: Pw) {
+                print("유저 정보 확인 완료")
+                guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as? UITabBarController else { return }
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainVC, animated: false)
+            } else {
+                let alert = UIAlertController(title: "로그인 실패", message: "비밀번호나 아이디를 확인하세요!", preferredStyle: UIAlertController.Style.alert)
+                let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                        }
+                alert.addAction(okAction)
+                present(alert, animated: false, completion: nil)
+                print("유저 정보 다름")
+            }
+        }
+        else {
+            let alert = UIAlertController(title: "입력 확인", message: "비밀번호나 아이디를 입력해 주세요!", preferredStyle: UIAlertController.Style.alert)
+            let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    }
+            alert.addAction(okAction)
+            present(alert, animated: false, completion: nil)
+            print("둘다 비었음")
+        }
+                
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
